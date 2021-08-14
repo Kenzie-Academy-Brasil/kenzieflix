@@ -2,6 +2,10 @@
 
 Projeto desenvolvido na parte 2 da maratona de programação da Kenzie Academy Brasil.
 
+## Ferramentas
+
+[Como utilizar o codepen e o VSCode](https://kenzie-academy-brasil.github.io/ferramentas/)
+
 ## O Projeto
 
 ### Estrutura de arquivos
@@ -29,4 +33,5 @@ Projeto desenvolvido na parte 2 da maratona de programação da Kenzie Academy B
 
 ## Layout
 
-- [Kenzieflix](./assets/img/kenzieflix.png)
+- [Kenzieflix Desktop](./assets/img/desktop.png)
+- [Kenzieflix Mobile](./assets/img/mobile.png)
