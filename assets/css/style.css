@@ -1,0 +1,85 @@
+/*Cascading Style Sheets(Folha de Estilos em Cascata, em português)
+ - ESTRUTURA DO CSS
+
+--seletor - selecionar um elemento
+--propriedade - cor de fundo
+--valor - azul
+
+--declaração de uma regra */
+
+/* ESTILOS GERAIS*/
+body,figure,img,div,header,nav,main,ul,li,a,p,section,article,h1,h2,footer{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none;
+}
+
+figcaption{
+    display:none;
+}
+img{
+    max-width: 1200px;
+}
+/* ESTILOS GERAIS*/
+
+/* ESTILO DO CABEÇALHO*/
+.cabecalho{}
+
+/*ESTILO DO LOGO*/
+.cabecalho .cabecalho__logo{}
+.cabecalho .cabecalho__logo img{}
+
+/*ESTILO DO MENU*/
+.cabecalho .cabecalho__menu{}
+.cabecalho .cabecalho__menu ul{}
+.cabecalho .cabecalho__menu li{}
+.cabecalho .cabecalho__menu a{}
+
+/*ESTILO ÁREA DE CONFIGURAÇÃO */
+.cabecalho .cabecalho__menuConfiguracao{}
+.cabecalho .cabecalho__menuConfiguracao ul{}
+.cabecalho .cabecalho__menuConfiguracao li{}
+.cabecalho .cabecalho__menuConfiguracao a{}
+
+/*ESTILO CONTEÚDO PRINCIPAL */
+main{}
+
+/*ESTILO SEÇÃO DESTAQUE */
+.secaoDestaque{}
+.secaoDestaque .secaoDestaque__imagemDestaque{}
+.secaoDestaque .secaoDestaque__imagemDestaque img{}
+
+.secaoDestaque .secaoDestaque__descricaoDestaque h1{}
+.secaoDestaque .secaoDestaque__descricaoDestaque p{}
+
+.secaoDestaque .secaoDestaque__navegacaoDestaque{}
+.secaoDestaque .secaoDestaque__navegacaoDestaque a{}
+
+/*ESTILO SEÇÃO FIMLES */
+.secaoFilmes{}
+.secaoFilmes h2{}
+.secaoFilmes .secaoFilmes__listaFilmes{}
+.secaoFilmes .secaoFilmes__listaFilmes ul{}
+.secaoFilmes .secaoFilmes__listaFilmes li{}
+.secaoFilmes .secaoFilmes__listaFilmes li figure{}
+.secaoFilmes .secaoFilmes__listaFilmes li img{}
+
+/*ESTILO RODAPÉ */
+.rodape{}
+.rodape .rodape__midiasSociais{}
+.rodape .rodape__midiasSociais ul{}
+.rodape .rodape__midiasSociais ul li{}
+.rodape .rodape__midiasSociais ul a{}
+.rodape .rodape__midiasSociais ul img{}
+
+.rodape .rodape__menuNavegacao{}
+.rodape .rodape__menuNavegacao ul{}
+.rodape .rodape__menuNavegacao ul li{}
+.rodape .rodape__menuNavegacao ul li a{}
+
+.rodape .rodape__linkCodigo{}
+.rodape p{}
+
