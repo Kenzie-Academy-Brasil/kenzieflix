@@ -15,6 +15,7 @@ body,figure,img,div,header,nav,main,ul,li,a,p,section,article,h1,h2,footer{
     list-style: none;
     text-decoration: none;
     outline: none;
+    font-family: 'Roboto', sans-serif;
 }
 
 figcaption{
@@ -23,16 +24,34 @@ figcaption{
 img{
     max-width: 1200px;
 }
+
+body{
+    background-color: #141414;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
 /* ESTILOS GERAIS*/
 
 /* ESTILO DO CABEÇALHO*/
-.cabecalho{}
+.cabecalho{
+    background-color: #141414;
+    padding: 16px 0;
+}
 
 /*ESTILO DO LOGO*/
-.cabecalho .cabecalho__logo{}
+.cabecalho .cabecalho__logo{
+    text-align: center;
+}
 .cabecalho .cabecalho__logo img{}
 
 /*ESTILO DO MENU*/
+.cabecalho .cabecalho__menu, .cabecalho .cabecalho__menuConfiguracao{
+    display: none;
+}
+
 .cabecalho .cabecalho__menu{}
 .cabecalho .cabecalho__menu ul{}
 .cabecalho .cabecalho__menu li{}
@@ -48,38 +67,176 @@ img{
 main{}
 
 /*ESTILO SEÇÃO DESTAQUE */
-.secaoDestaque{}
-.secaoDestaque .secaoDestaque__imagemDestaque{}
-.secaoDestaque .secaoDestaque__imagemDestaque img{}
+.secaoDestaque{
+    background-image: url(../img/destaque.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px 20px 22px;
+}
+.secaoDestaque .secaoDestaque__imagemDestaque{
+    display: none;
+}
+.secaoDestaque .secaoDestaque__imagemDestaque img{
+    width: 100%;
+}
 
+.secaoDestaque .secaoDestaque__descricaoDestaque{
+    color: white;
+}
 .secaoDestaque .secaoDestaque__descricaoDestaque h1{}
-.secaoDestaque .secaoDestaque__descricaoDestaque p{}
+.secaoDestaque .secaoDestaque__descricaoDestaque h1 img{
+    width: 100%;
+    max-width: 180px;
+}
+.secaoDestaque .secaoDestaque__descricaoDestaque p{
+    margin: 10px 0;
+    font-size: 0.8rem;
+}
 
 .secaoDestaque .secaoDestaque__navegacaoDestaque{}
-.secaoDestaque .secaoDestaque__navegacaoDestaque a{}
+.secaoDestaque .secaoDestaque__navegacaoDestaque a{
+    font-size: 0.8rem;
+    background-color: white;
+    color: black;
+    padding: 6px 15px;
+    border-radius: 3px;
+    display: inline-block;
+}
 
 /*ESTILO SEÇÃO FIMLES */
-.secaoFilmes{}
-.secaoFilmes h2{}
-.secaoFilmes .secaoFilmes__listaFilmes{}
-.secaoFilmes .secaoFilmes__listaFilmes ul{}
-.secaoFilmes .secaoFilmes__listaFilmes li{}
+.secaoFilmes{
+    color: #E5E5E5;
+    padding: 0 20px;
+    overflow-x: hidden;
+    margin-top: 20px;
+}
+.secaoFilmes h2{
+    font-size: 1.1rem;
+}
+.secaoFilmes .secaoFilmes__listaFilmes{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    margin-top: 10px;
+}
+.secaoFilmes .secaoFilmes__listaFilmes li{
+    margin-right: 10px;
+}
 .secaoFilmes .secaoFilmes__listaFilmes li figure{}
 .secaoFilmes .secaoFilmes__listaFilmes li img{}
 
 /*ESTILO RODAPÉ */
-.rodape{}
+.rodape{
+    padding: 0 20px;
+    margin-top: 30px;
+    color: #808080;
+}
 .rodape .rodape__midiasSociais{}
-.rodape .rodape__midiasSociais ul{}
-.rodape .rodape__midiasSociais ul li{}
-.rodape .rodape__midiasSociais ul a{}
+.rodape .rodape__midiasSociais ul{
+    display: flex;
+}
+.rodape .rodape__midiasSociais ul li{
+    margin-right: 8px;
+}
+.rodape .rodape__midiasSociais ul a{
+}
 .rodape .rodape__midiasSociais ul img{}
 
-.rodape .rodape__menuNavegacao{}
+.rodape .rodape__menuNavegacao{
+    margin: 16px 0;
+}
 .rodape .rodape__menuNavegacao ul{}
 .rodape .rodape__menuNavegacao ul li{}
-.rodape .rodape__menuNavegacao ul li a{}
+.rodape .rodape__menuNavegacao ul li a{
+    color: #808080;
+}
 
-.rodape .rodape__linkCodigo{}
+.rodape .rodape__linkCodigo{
+    color: #808080;
+    border: 1px solid #808080;
+    padding: 9px 15px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
 .rodape p{}
 
+
+@media screen and (min-width: 620px) {
+    .secaoDestaque {
+        padding: 100px 20px 42px;
+    }
+    .secaoDestaque .secaoDestaque__descricaoDestaque h1 img {
+        max-width: 320px;
+    }
+    .secaoDestaque .secaoDestaque__descricaoDestaque {
+        max-width: 380px;
+    }
+    .rodape .rodape__menuNavegacao {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (min-width: 991px) {
+    .secaoDestaque {
+        padding: 150px 30px 60px;
+    }
+    .secaoDestaque .secaoDestaque__descricaoDestaque {
+        max-width: 420px;
+    }
+    .secaoDestaque .secaoDestaque__descricaoDestaque h1 img {
+        max-width: 410px;
+    }
+    .secaoDestaque .secaoDestaque__descricaoDestaque p {
+        margin: 14px 0 22px;
+        font-size: 1.1rem;
+    }
+    .secaoDestaque .secaoDestaque__navegacaoDestaque a {
+        font-size: 1rem;
+        padding: 10px 28px;
+    }
+    .secaoFilmes h2 {
+        font-size: 1.3rem;
+    }
+    .secaoFilmes {
+        padding: 0 30px;
+    }
+    .rodape {
+        padding: 0 30px 30px;
+    }
+    .cabecalho .cabecalho__menu, .cabecalho .cabecalho__menuConfiguracao {
+        display: block;
+    }
+    .cabecalho {
+        background-color: #141414;
+        padding: 20px 0;
+    }
+    .cabecalho .container{
+        display: flex;
+    }
+    .cabecalho .cabecalho__logo {
+        text-align: center;
+        margin-right: 20px;
+    }
+    .cabecalho .cabecalho__menu, .cabecalho .cabecalho__menuConfiguracao {
+        display: block;
+    }
+    .cabecalho .cabecalho__menu{
+        flex-grow: 2;
+    }
+    .cabecalho .cabecalho__menu li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+    .cabecalho .cabecalho__menu a {
+        color: white;
+        font-size: 0.8rem;
+    }
+    .cabecalho .cabecalho__menuConfiguracao li {
+        display: inline-block;
+    }
+    .cabecalho .cabecalho__menuConfiguracao a {
+        color: white;
+    }
+}
