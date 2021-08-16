@@ -29,6 +29,18 @@ body{
     background-color: #141414;
 }
 
+
+/* This is the most required thing you should add */
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
 *{
     scrollbar-width: thin;
     scrollbar-color: #fff #141414;
@@ -66,7 +78,7 @@ body{
 .cabecalho .cabecalho__logo img{}
 
 /*ESTILO DO MENU*/
-.cabecalho .cabecalho__menu, .cabecalho .cabecalho__menuConfiguracao{
+.cabecalho   .cabecalho__menuConfiguracao{
     display: none;
 }
 
@@ -294,4 +306,65 @@ main{}
     .cabecalho .cabecalho__menuConfiguracao a {
         color: white;
     }
+}
+
+.menu__btn{
+    display: none;
+
+}
+
+@media (max-width:990px){
+    .menu__btn{
+        display: block;
+            margin-right: 10px;
+            width: 35px;
+            height: 24px;
+            border: none;
+            cursor: pointer;
+            border-top: 2px solid red;
+            border-bottom: 2px solid red;
+            background-color: transparent;
+            position: relative;            
+        }
+
+        .menu__btn::before{
+            content: '';
+            position: absolute;
+            width: 35px;
+            height: 2px;
+            background-color: red;
+            left: 0;
+            top: 9px;
+        }
+        
+    .menu-list{
+        display: block;
+        position: absolute;
+        right: 0;
+        left: 0;
+        top: 69px;
+        transform: translateY(-226px);
+        text-align: center;
+        background-color: #141414;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding:20px 0;
+        transition: all 2s;
+        z-index: -3;
+    }
+
+    .cabecalho .cabecalho__menu a {
+        color:red;
+    }
+
+    .menu-list.menu-active{
+        transform: translateY(0);
+    }
+
+    #idCabecalho{
+        position:relative;
+        z-index:4;
+    }
+
 }
